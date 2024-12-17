@@ -14,4 +14,4 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Build with Gradle
-      run: cd perfetto&&tools/install-build-deps --ui
+      run: tools/install-build-deps --ui
