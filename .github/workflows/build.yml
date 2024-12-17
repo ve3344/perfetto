@@ -13,5 +13,12 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-    - name: Build with Gradle
+    - name: Build
       run: tools/install-build-deps --ui
+    - name: Save
+      uses: LarchLiu/actions-save-files@v1.0.3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: .
+
+    
