@@ -18,22 +18,12 @@ jobs:
     - name: Build ui
       run: ui/build
     - name: Move
-      run: mkdir -p save&&mv ui/dist ui/save&&mv ui/out ui/save
+      run: mv ui/out ui/save
     - name: Save
       uses: LarchLiu/actions-save-files@v1.0.3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_branch: publish
         publish_dir: ui/save
-    - name: Update dist
-      uses: actions/upload-artifact@v3
-      with:
-        name: ui_dist
-        path: ui/dist
-    - name: Update out
-      uses: actions/upload-artifact@v3
-      with:
-        name: ui_out
-        path: ui/out
 
     
