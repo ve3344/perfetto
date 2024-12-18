@@ -17,11 +17,13 @@ jobs:
       run: tools/install-build-deps --ui
     - name: Build ui
       run: ui/build
+    - name: Move
+      run: mkdir -p save&&mv ui/dist ui/save&&mv ui/out ui/save
     - name: Save
       uses: LarchLiu/actions-save-files@v1.0.3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_branch: builded
-        publish_dir: ui/dist
+        publish_branch: publish
+        publish_dir: ui/save
 
     
