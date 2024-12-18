@@ -20,10 +20,9 @@ jobs:
     - name: Move
       run: mv ui/out ui/save
     - name: Save
-      uses: LarchLiu/actions-save-files@v1.0.3
+      uses: actions/upload-artifact@v4.5.0
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_branch: publish
-        publish_dir: ui/save
+        name: save
+        path: ui/save
 
     
