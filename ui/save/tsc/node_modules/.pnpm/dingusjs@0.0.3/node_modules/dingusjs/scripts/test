@@ -1,0 +1,8 @@
+#!/bin/bash
+set -e
+
+# TODO(hjd): Position independence.
+
+ln -snf .. node_modules/dingusjs
+node node_modules/.bin/tsc typescript_test.ts
+node node_modules/.bin/ospec typescript_test.js test.js

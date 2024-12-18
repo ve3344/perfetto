@@ -1,0 +1,1 @@
+{"version":3,"file":"perfetto_version.js","sourceRoot":"","sources":["../../../src/gen/perfetto_version.ts"],"names":[],"mappings":";;;AAAa,QAAA,OAAO,GAAG,iBAAiB,CAAC;AAC5B,QAAA,YAAY,GAAG,0CAA0C,CAAC","sourcesContent":["export const VERSION = \"v48.1-9920148e2\";\nexport const SCM_REVISION = \"9920148e2699079614cd5bab2ed64aee97dcd247\";"]}
